@@ -35,8 +35,8 @@ export default function Projects() {
               <ProjectBox
                 img={ProjectImg1}
                 title="PPC Ads"
-                text="Delivered ads to specific audience that is
-                interested in learning AI, through demographic and interest-based segments and specific locations, key metrics tracked were CPC, CPA, CTR, Viewability and RoAS"
+                text="Delivered ads to a specific audience group that is
+                interested in learning AI, through demographic and interest-based segments within specific locations, key metrics tracked were CPC, CPA, CTR, Viewability and RoAS"
                 action={() => alert("clicked")}
               />
             </div>
@@ -44,7 +44,7 @@ export default function Projects() {
               <ProjectBox
                 img={ProjectImg2}
                 title="Location Intelligence"
-                text="Location Intelligence is critical for hyperlocal targeting of audience. we can focus on specific neighborhoods, key locations like malls, cinema halls and educational institutions"
+                text="Location Intelligence is critical for hyperlocal targeting of audience. We have delivered Ads on specific neighborhoods, key locations like malls, cinema halls and educational institutions"
                 action={() => alert("clicked")}
               />
             </div>
@@ -52,7 +52,7 @@ export default function Projects() {
               <ProjectBox
                 img={ProjectImg3}
                 title="Video Marketing"
-                text="Delivered youtube video ads that can start prior to specific kind of videos and ad banners that show up while the video is playing. These video clips were having high impact on Conversion"
+                text="Delivered youtube video ads that can start prior or during Youtube Videos and ad banners that show up while the video is playing. These video clips were having high impact on Conversion and brand awareness"
                 action={() => alert("clicked")}
               />
             </div>
@@ -78,7 +78,7 @@ export default function Projects() {
               <ProjectBox
                 img={ProjectImg6}
                 title="Highly Relevant Audience"
-                text="Campaigns can be delivered to specific audience based on behavioral, psychographic and interest traits"
+                text="Campaigns were delivered to specific audience groups based on geographical, behavioral, psychographic and interest groupings"
                 action={() => alert("clicked")}
               />
             </div>
@@ -101,7 +101,7 @@ export default function Projects() {
               </h4>
               <h2 className="font40 extraBold">Perfecting Success</h2>
               <p className="font12">
-                Backed by Experience, Creativity, technical know-how and
+                Backed by Experience, Creativity, Technical know-how and
                 superior Customer XP by going the extra mile
               </p>
               <ButtonsRow

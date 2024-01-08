@@ -35,9 +35,9 @@ export default function Contact() {
             <h1 className="font40 extraBold">Let's get in touch</h1>
             <p className="font13">
               Provide us with some information on the use case and we will
-              respond you
+              respond to you
               <br />
-              with some opportunities to grow your business.
+              with opportunities to grow your business.
             </p>
           </HeaderInfo>
           <div className="row" style={{ paddingBottom: "30px" }}>

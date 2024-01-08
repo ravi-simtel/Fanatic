@@ -15,10 +15,10 @@ export default function Header() {
         <div>
           <h1 className="extraBold font60">Digital Media and Advertising</h1>
           <HeaderP className="font13 semiBold">
-            On behalf of advertisers, we can deliver PPC advertisements
-            including Banners, Native Ads, Video and Audio. In addition, we can
-            handle your Social Media Marketing, Influencer Marketing, Content
-            Marketing Video Marketing and SMS / email Marketing
+            We deliver marketing campaigns and strategies that will
+            significantly increase your RoAS. We are adept at PPC advertisement,
+            Social Media Marketing, Influencer Marketing, Content Marketing,
+            Video Marketing and SMS / email Marketing
           </HeaderP>
           <Button variant="contained" component={Link} to="contact">
             Contact Us

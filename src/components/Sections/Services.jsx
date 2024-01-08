@@ -68,13 +68,13 @@ export default function Services() {
             <Advertising className="flexSpaceCenter">
               <AddLeft>
                 <h4 className="font15 semiBold">Web3 Company</h4>
-                <h2 className="font40 extraBold">A Study of Creativity</h2>
+                <h2 className="font40 extraBold">Creative Vibe to Marketing</h2>
                 <p className="font12">
                   We deliver solid RoAS to our clients by focusing on few key
                   things - Hypertargeting, Personalization and a
                   Privacy-Preserving DMP. We understand measurement well to
-                  offer unique solutions to tracking the effective of the
-                  campaigns
+                  offer unique solutions to track the effectiveness of the
+                  marketing campaigns
                 </p>
                 <ButtonsRow
                   className="flexNullCenter"

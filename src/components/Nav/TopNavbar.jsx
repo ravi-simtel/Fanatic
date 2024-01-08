@@ -31,9 +31,13 @@ export default function TopNavbar() {
         <NavInner className="container flexSpaceCenter">
           <Link className="pointer flexNullCenter" to="home" smooth={true}>
             <img src={Logo} alt="logo"></img>
-            <h1 style={{ marginLeft: "15px" }} className="font20 extraBold">
+            <a
+              href="https://simtel.ai"
+              style={{ marginLeft: "15px" }}
+              className="font20 extraBold"
+            >
               Simtel AI
-            </h1>
+            </a>
           </Link>
           <BurderWrapper
             className="pointer"

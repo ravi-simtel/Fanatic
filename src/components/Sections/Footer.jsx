@@ -36,7 +36,6 @@ export default function Contact() {
               <span className="blueColor font13">Simtel AI</span> All Right
               Reserved
             </StyleP>
-
             <Link
               className="whiteColor animate pointer font13"
               to="home"
@@ -47,6 +46,11 @@ export default function Contact() {
             </Link>
           </InnerWrapper>
         </div>
+        <br></br>
+        <p style={{ color: "Tomato", fontSize: "10px", margin: "auto" }}>
+          {"    "}
+          Images provided by Pixabay and Freepik
+        </p>
       </div>
     </Wrapper>
   );
