@@ -1,11 +1,32 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 // Assets
-import ContactImg1 from "../../assets/img/contact-1.png";
-import ContactImg2 from "../../assets/img/contact-2.png";
 import ContactImg3 from "../../assets/img/contact.jpg";
+import emailjs from "@emailjs/browser";
+import Button from "@material-ui/core/Button";
 
 export default function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_uq07pih",
+        "template_kkrp1up",
+        form.current,
+        "WFEkqnW7aS59al7vr"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <Wrapper id="contact">
       <div className="lightBg">
@@ -21,8 +42,8 @@ export default function Contact() {
           </HeaderInfo>
           <div className="row" style={{ paddingBottom: "30px" }}>
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-              <Form>
-                <label className="font13">First name:</label>
+              <Form ref={form} onSubmit={sendEmail}>
+                <label className="font13">Your Name/Company Name:</label>
                 <input
                   type="text"
                   id="fname"
@@ -52,27 +73,11 @@ export default function Contact() {
                   className="font20 extraBold"
                 />
               </Form>
-              <SumbitWrapper className="flex">
-                <ButtonInput
-                  type="submit"
-                  value="Send Message"
-                  className="pointer animate radius8"
-                  style={{ maxWidth: "220px" }}
-                />
-              </SumbitWrapper>
+              <Button variant="contained" onClick={sendEmail}>
+                Submit
+              </Button>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-              {/* <div
-                style={{ width: "50%" }}
-                className="flexNullCenter flexColumn"
-              >
-                <ContactImgBox>
-                  <img src={ContactImg1} alt="office" className="radius6" />
-                </ContactImgBox>
-                <ContactImgBox>
-                  <img src={ContactImg2} alt="office" className="radius6" />
-                </ContactImgBox>
-              </div> */}
               <img src={ContactImg3} alt="office" className="radius6" />
             </div>
           </div>
@@ -111,39 +116,3 @@ const Form = styled.form`
     padding: 30px 0;
   }
 `;
-const ButtonInput = styled.input`
-  border: 1px solid #7620ff;
-  background-color: #7620ff;
-  width: 100%;
-  padding: 15px;
-  outline: none;
-  color: #fff;
-  :hover {
-    background-color: #580cd2;
-    border: 1px solid #7620ff;
-    color: #fff;
-  }
-  @media (max-width: 991px) {
-    margin: 0 auto;
-  }
-`;
-const ContactImgBox = styled.div`
-  max-width: 180px; 
-  align-self: flex-end; 
-  margin: 10px 30px 10px 0;
-`;
-const SumbitWrapper = styled.div`
-  @media (max-width: 991px) {
-    width: 100%;
-    margin-bottom: 50px;
-  }
-`;
-
-
-
-
-
-
-
-
-
