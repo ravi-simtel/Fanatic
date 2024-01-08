@@ -1,16 +1,19 @@
 import React from "react";
 import styled from "styled-components";
+import Button from "@material-ui/core/Button";
+
 // Components
 import ProjectBox from "../Elements/ProjectBox";
-import FullButton from "../Buttons/FullButton";
+
 // Assets
-import ProjectImg1 from "../../assets/img/projects/1.png";
-import ProjectImg2 from "../../assets/img/projects/2.png";
-import ProjectImg3 from "../../assets/img/projects/3.png";
-import ProjectImg4 from "../../assets/img/projects/4.png";
-import ProjectImg5 from "../../assets/img/projects/5.png";
-import ProjectImg6 from "../../assets/img/projects/6.png";
-import AddImage2 from "../../assets/img/add/add2.png";
+import ProjectImg1 from "../../assets/img/projects/ads.jpg";
+import ProjectImg2 from "../../assets/img/projects/location.jpg";
+import ProjectImg3 from "../../assets/img/projects/video.jpg";
+import ProjectImg4 from "../../assets/img/projects/measurement.jpg";
+import ProjectImg5 from "../../assets/img/projects/social_media.jpg";
+import ProjectImg6 from "../../assets/img/projects/audience.jpg";
+import AddImage2 from "../../assets/img/add/web3.jpg";
+import { Link } from "react-scroll";
 
 export default function Projects() {
   return (
@@ -18,35 +21,38 @@ export default function Projects() {
       <div className="whiteBg">
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold">Our Awesome Projects</h1>
+            <h1 className="font40 extraBold">Next-Gen Marketing</h1>
             <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+              We have expertise in delivering various types of advertisements
+              through PPC, SEO, Connected TV and Social Media
               <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
+              We can achieve a range of KPIs while delivering different kinds of
+              advertisements on different channels
             </p>
           </HeaderInfo>
           <div className="row textCenter">
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={ProjectImg1}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                title="PPC Ads"
+                text="Delivered ads to specific audience that is
+                interested in learning AI, through demographic and interest-based segments and specific locations, key metrics tracked were CPC, CPA, CTR, Viewability and RoAS"
                 action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={ProjectImg2}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                title="Location Intelligence"
+                text="Location Intelligence is critical for hyperlocal targeting of audience. we can focus on specific neighborhoods, key locations like malls, cinema halls and educational institutions"
                 action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={ProjectImg3}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                title="Video Marketing"
+                text="Delivered youtube video ads that can start prior to specific kind of videos and ad banners that show up while the video is playing. These video clips were having high impact on Conversion"
                 action={() => alert("clicked")}
               />
             </div>
@@ -54,32 +60,27 @@ export default function Projects() {
           <div className="row textCenter">
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
-                img={ProjectImg4}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                img={ProjectImg5}
+                title="Social Media"
+                text="Social Media has a high impact on specific kind of campaigns that sell products instantly, most suitable for e-commerce"
                 action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
-                img={ProjectImg5}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                img={ProjectImg4}
+                title="Campaign Measurement"
+                text="We can measure campign effectiveness using offline visitations, online purchases and information shared voluntarily by customers"
                 action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={ProjectImg6}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                title="Highly Relevant Audience"
+                text="Campaigns can be delivered to specific audience based on behavioral, psychographic and interest traits"
                 action={() => alert("clicked")}
               />
-            </div>
-          </div>
-          <div className="row flexCenter">
-            <div style={{ margin: "50px 0", width: "200px" }}>
-              <FullButton title="Load More" action={() => alert("clicked")} />
             </div>
           </div>
         </div>
@@ -95,18 +96,22 @@ export default function Projects() {
               </AddLeftInner>
             </AddLeft>
             <AddRight>
-              <h4 className="font15 semiBold">A few words about company</h4>
-              <h2 className="font40 extraBold">A Study of Creativity</h2>
+              <h4 className="font15 semiBold">
+                Simtel AI - Advertising and Media
+              </h4>
+              <h2 className="font40 extraBold">Perfecting Success</h2>
               <p className="font12">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-                diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                Backed by Experience, Creativity, technical know-how and
+                superior Customer XP by going the extra mile
               </p>
-              <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0" }}>
-                <div style={{ width: "190px" }}>
-                  <FullButton title="Get Started" action={() => alert("clicked")} />
-                </div>
+              <ButtonsRow
+                className="flexNullCenter"
+                style={{ margin: "30px 0" }}
+              >
                 <div style={{ width: "190px", marginLeft: "15px" }}>
-                  <FullButton title="Contact Us" action={() => alert("clicked")} border />
+                  <Button variant="contained" component={Link} to="contact">
+                    Contact Us
+                  </Button>
                 </div>
               </ButtonsRow>
             </AddRight>

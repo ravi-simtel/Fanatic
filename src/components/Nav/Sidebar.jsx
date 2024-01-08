@@ -3,19 +3,23 @@ import styled from "styled-components";
 import { Link } from "react-scroll";
 // Assets
 import CloseIcon from "../../assets/svg/CloseIcon";
-import LogoIcon from "../../assets/svg/Logo";
+import Logo from "../../assets/img/logo.png";
+import Button from "@material-ui/core/Button";
 
 export default function Sidebar({ sidebarOpen, toggleSidebar }) {
   return (
     <Wrapper className="animate darkBg" sidebarOpen={sidebarOpen}>
       <SidebarHeader className="flexSpaceCenter">
         <div className="flexNullCenter">
-          <LogoIcon />
+          <img src={Logo} alt="logo"></img>
           <h1 className="whiteColor font20" style={{ marginLeft: "15px" }}>
-            fanatic
+            Simtel AI
           </h1>
         </div>
-        <CloseBtn onClick={() => toggleSidebar(!sidebarOpen)} className="animate pointer">
+        <CloseBtn
+          onClick={() => toggleSidebar(!sidebarOpen)}
+          className="animate pointer"
+        >
           <CloseIcon />
         </CloseBtn>
       </SidebarHeader>
@@ -108,14 +112,18 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
       </UlStyle>
       <UlStyle className="flexSpaceCenter">
         <li className="semiBold font15 pointer">
-          <a href="/" style={{ padding: "10px 30px 10px 0" }} className="whiteColor">
+          <a
+            href="/"
+            style={{ padding: "10px 30px 10px 0" }}
+            className="whiteColor"
+          >
             Log in
           </a>
         </li>
         <li className="semiBold font15 pointer flexCenter">
-          <a href="/" className="radius8 lightBg" style={{ padding: "10px 15px" }}>
-            Get Started
-          </a>
+          <Button variant="contained" component={Link} to="contact">
+            Contact Us
+          </Button>{" "}
         </li>
       </UlStyle>
     </Wrapper>

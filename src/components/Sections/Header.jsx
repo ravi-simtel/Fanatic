@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 // Components
-import FullButton from "../Buttons/FullButton";
+import Button from "@material-ui/core/Button";
+import { Link } from "react-scroll";
 // Assets
-import HeaderImage from "../../assets/img/header-img.png";
+import HeaderImage from "../../assets/img/girl_at_office.png";
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
 
@@ -12,28 +13,43 @@ export default function Header() {
     <Wrapper id="home" className="container flexSpaceCenter">
       <LeftSide className="flexCenter">
         <div>
-          <h1 className="extraBold font60">We are Digital Agency.</h1>
+          <h1 className="extraBold font60">Digital Media and Advertising</h1>
           <HeaderP className="font13 semiBold">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-            voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            On behalf of advertisers, we can deliver PPC advertisements
+            including Banners, Native Ads, Video and Audio. In addition, we can
+            handle your Social Media Marketing, Influencer Marketing, Content
+            Marketing Video Marketing and SMS / email Marketing
           </HeaderP>
-          <BtnWrapper>
-            <FullButton title="Get Started" />
-          </BtnWrapper>
+          <Button variant="contained" component={Link} to="contact">
+            Contact Us
+          </Button>
         </div>
       </LeftSide>
       <RightSide>
         <ImageWrapper>
-          <Img className="radius8" src={HeaderImage} alt="office" style={{zIndex: 9}} />
+          <Img
+            className="radius8"
+            src={HeaderImage}
+            alt="office"
+            style={{ zIndex: 9 }}
+          />
           <QuoteWrapper className="flexCenter darkBg radius8">
             <QuotesWrapper>
               <QuotesIcon />
             </QuotesWrapper>
             <div>
               <p className="font15 whiteColor">
-                <em>Friends, such as we desire, are dreams and fables. Friendship demands the ability to do without it.</em>
+                <em>
+                  We strive for transparency and efficiency in running the
+                  marketing campaigns.
+                </em>
               </p>
-              <p className="font13 orangeColor textRight" style={{marginTop: '10px'}}>Ralph Waldo Emerson</p>
+              <p
+                className="font13 orangeColor textRight"
+                style={{ marginTop: "10px" }}
+              >
+                Simtel AI
+              </p>
             </div>
           </QuoteWrapper>
           <DotsWrapper>
@@ -45,7 +61,6 @@ export default function Header() {
     </Wrapper>
   );
 }
-
 
 const Wrapper = styled.section`
   padding-top: 80px;
@@ -87,12 +102,7 @@ const HeaderP = styled.div`
     max-width: 100%;
   }
 `;
-const BtnWrapper = styled.div`
-  max-width: 190px;
-  @media (max-width: 960px) {
-    margin: 0 auto;
-  }
-`;
+
 const GreyDiv = styled.div`
   width: 30%;
   height: 700px;

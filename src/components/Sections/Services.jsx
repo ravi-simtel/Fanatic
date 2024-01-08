@@ -1,57 +1,65 @@
 import React from "react";
 import styled from "styled-components";
+import Button from "@material-ui/core/Button";
+import { Link } from "react-scroll";
+
 // Components
-import ClientSlider from "../Elements/ClientSlider";
+// import ClientSlider from "../Elements/ClientSlider";
 import ServiceBox from "../Elements/ServiceBox";
-import FullButton from "../Buttons/FullButton";
 // Assets
-import AddImage1 from "../../assets/img/add/1.png";
-import AddImage2 from "../../assets/img/add/2.png";
-import AddImage3 from "../../assets/img/add/3.png";
-import AddImage4 from "../../assets/img/add/4.png";
+import AddImage1 from "../../assets/img/add/orange.jpg";
+import AddImage2 from "../../assets/img/add/cloud.jpg";
+import AddImage3 from "../../assets/img/add/sun.jpg";
+import AddImage4 from "../../assets/img/add/clock.jpg";
 
 export default function Services() {
   return (
     <Wrapper id="services">
       <div className="lightBg" style={{ padding: "50px 0" }}>
-        <div className="container">
+        {/* <div className="container">
           <ClientSlider />
-        </div>
+        </div> */}
       </div>
       <div className="whiteBg" style={{ padding: "60px 0" }}>
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold">Our Awesome Services</h1>
+            <h1 className="font40 extraBold">Our Key Services</h1>
             <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+              Advertisers can choose between Programmatic RTB, Social Media
+              Marketing, Content Marketing and SMS/email services
               <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
+              We can handle native ads, video, audio and banner ads with
+              measurement
             </p>
           </HeaderInfo>
           <ServiceBoxRow className="flex">
             <ServiceBoxWrapper>
               <ServiceBox
-                icon="roller"
-                title="Graphic Design"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+                icon="rtb"
+                title="Programmatic RTB"
+                subtitle="We are connected to some of the top SSPs and we can generate excellent RoAS. We can deliver Native Ads, Banner Ads, Video and Audio Ads with OpenRTB 2.6 Spec"
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
-                icon="monitor"
-                title="Web Design"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
+                icon="seo"
+                title="SEO/Social Media"
+                subtitle="We deliver novel marketing campaigns E2E including measurement on Google Ads Manager, Microsoft Ads, Facebook Ads and Instagram Ads"
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
-                icon="browser"
-                title="Development"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+                icon="content"
+                title="Content Marketing"
+                subtitle="Blogs, Whitepapers, Videos and Short Clips are our forte and you can reach your prospects directly and convery your message"
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
-              <ServiceBox icon="printer" title="Print" subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor." />
+              <ServiceBox
+                icon="email"
+                title="Email/SMS"
+                subtitle="For bulk messages with offers and deep discounts, we can deliver email and SMS messages that bring them to explore on your landing pages"
+              />
             </ServiceBoxWrapper>
           </ServiceBoxRow>
         </div>
@@ -59,19 +67,22 @@ export default function Services() {
           <div className="container">
             <Advertising className="flexSpaceCenter">
               <AddLeft>
-                <h4 className="font15 semiBold">A few words about company</h4>
+                <h4 className="font15 semiBold">Web3 Company</h4>
                 <h2 className="font40 extraBold">A Study of Creativity</h2>
                 <p className="font12">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-                  diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                  We deliver solid RoAS to our clients by focusing on few key
+                  things - Hypertargeting, Personalization and a
+                  Privacy-Preserving DMP. We understand measurement well to
+                  offer unique solutions to tracking the effective of the
+                  campaigns
                 </p>
-                <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0"}}>
-                  <div style={{ width: "190px" }}>
-                    <FullButton title="Get Started" action={() => alert("clicked")} />
-                  </div>
-                  <div style={{ width: "190px", marginLeft: "15px" }}>
-                    <FullButton title="Contact Us" action={() => alert("clicked")} border />
-                  </div>
+                <ButtonsRow
+                  className="flexNullCenter"
+                  style={{ margin: "30px 0" }}
+                >
+                  <Button variant="contained" component={Link} to="contact">
+                    Contact Us
+                  </Button>
                 </ButtonsRow>
               </AddLeft>
               <AddRight>
@@ -106,8 +117,9 @@ const Wrapper = styled.section`
   width: 100%;
 `;
 const ServiceBoxRow = styled.div`
-  @media (max-width: 860px) {
+  @media (max-width: 1200px) {
     flex-direction: column;
+    padding: 10px 0;
   }
 `;
 const ServiceBoxWrapper = styled.div`

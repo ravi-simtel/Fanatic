@@ -217,8 +217,15 @@
     border-radius: 1rem;
   }
   .radius6 {
-    border-radius: 0.6rem;
+    display: flex;
+
+    padding: 100px 30px;
+    border-radius: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
   }
+
   /* COLORS */
   .darkColor {
     color: #0B093B;

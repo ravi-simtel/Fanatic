@@ -2,30 +2,47 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 // Assets
-import LogoImg from "../../assets/svg/Logo";
+import Logo from "../../assets/img/logo.png";
 
 export default function Contact() {
-
   const getCurrentYear = () => {
     return new Date().getFullYear();
-  }
+  };
 
   return (
     <Wrapper>
       <div className="darkBg">
         <div className="container">
-          <InnerWrapper className="flexSpaceCenter" style={{ padding: "30px 0" }}>
-            <Link className="flexCenter animate pointer" to="home" smooth={true} offset={-80}>
-              <LogoImg />
-              <h1 className="font15 extraBold whiteColor" style={{ marginLeft: "15px" }}>
-                Fanatic
+          <InnerWrapper
+            className="flexSpaceCenter"
+            style={{ padding: "30px 0" }}
+          >
+            <Link
+              className="flexCenter animate pointer"
+              to="home"
+              smooth={true}
+              offset={-80}
+            >
+              <img src={Logo} alt="logo"></img>
+              <h1
+                className="font15 extraBold whiteColor"
+                style={{ marginLeft: "15px" }}
+              >
+                Simtel AI
               </h1>
             </Link>
             <StyleP className="whiteColor font13">
-              © {getCurrentYear()} - <span className="purpleColor font13">Fanatic</span> All Right Reserved
+              © {getCurrentYear()} -{" "}
+              <span className="blueColor font13">Simtel AI</span> All Right
+              Reserved
             </StyleP>
 
-            <Link className="whiteColor animate pointer font13" to="home" smooth={true} offset={-80}>
+            <Link
+              className="whiteColor animate pointer font13"
+              to="home"
+              smooth={true}
+              offset={-80}
+            >
               Back to top
             </Link>
           </InnerWrapper>
